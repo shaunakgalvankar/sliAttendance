@@ -56,6 +56,8 @@ if st.button('Generate', key='generate_button'):
 
     b=PossibleHoursBetween(start_date, end_date)
     c=(total_hours/b)*100
+    st.write("The total time checked in was"+total_hours)
+    st.write("The total possible time was"+b)
     st.write(c)
 
 
