@@ -54,7 +54,21 @@ if st.button('Generate', key='generate_button'):
     total_hours = total_seconds / 3600
     total_hours = round(total_hours, 2)
 
-    b=PossibleHoursBetween(start_date, end_date)
+    b = PossibleHoursBetween(start_date, end_date)
+
+    import matplotlib.pyplot as plt
+
+    # Create a bar graph
+    labels = ['Total Hours', 'Possible Hours']
+    values = [total_hours, b]
+
+    plt.bar(labels, values)
+    plt.xlabel('Hours')
+    plt.ylabel('Count')
+    plt.title('Total Hours vs Possible Hours')
+
+    # Display the bar graph
+    st.pyplot(plt)
     c=(total_hours/b)*100
     st.write(total_hours)
     st.write(b)
