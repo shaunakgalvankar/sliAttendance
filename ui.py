@@ -62,14 +62,14 @@ if st.button('Generate', key='generate_button'):
     labels = ['Total Hours', 'Possible Hours']
     values = [total_hours, b]
 
-    plt.bar(labels, values)
-    plt.xlabel('Hours')
-    plt.ylabel('Count')
+    plt.barh(labels, values)  # Switched to barh for horizontal bars
+    plt.xlabel('Count')  # Switched x-axis label
+    plt.ylabel('Hours')  # Switched y-axis label
     plt.title('Total Hours vs Possible Hours')
 
     # Display the bar graph
     st.pyplot(plt)
-    c=(total_hours/b)*100
+    c = (total_hours / b) * 100
     st.write(total_hours)
     st.write(b)
     st.write(c)
