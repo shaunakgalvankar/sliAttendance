@@ -4,7 +4,7 @@ import numpy as np
 import json
 import json
 import datetime
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from calculateStudentHours import studentHoursBetween
 from calculatePossibleHours import PossibleHoursBetween
 import datetime
@@ -76,10 +76,10 @@ for student, values in student_data.items():
 pie_data = [30, 40, 20, 10]
 
 # Display the pie chart
-st.title('Pie Chart')
-fig, ax = plt.subplots()
-ax.pie(pie_data, labels=['A', 'B', 'C', 'D'])
-st.pyplot(fig)
+# st.title('Pie Chart')
+# fig, ax = plt.subplots()
+# ax.pie(pie_data, labels=['A', 'B', 'C', 'D'])
+# st.pyplot(fig)
 
 # Load student responses from JSON file
 with open('responses.json') as f:
