@@ -4,7 +4,7 @@ import numpy as np
 import json
 import json
 import datetime
-import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 from calculateStudentHours import studentHoursBetween
 from calculatePossibleHours import PossibleHoursBetween
 import datetime
