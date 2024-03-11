@@ -4,7 +4,7 @@ import numpy as np
 import json
 import json
 import datetime
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 from calculateStudentHours import studentHoursBetween
 from calculatePossibleHours import PossibleHoursBetween
 import datetime
@@ -56,7 +56,7 @@ if st.button('Generate', key='generate_button'):
 
     b = PossibleHoursBetween(start_date, end_date)
 
-    import matplotlib.pyplot as plt
+
 
     # Create a bar graph
     labels = ['Total Hours', 'Possible Hours']
