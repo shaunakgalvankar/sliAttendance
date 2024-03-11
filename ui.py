@@ -63,8 +63,8 @@ if st.button('Generate', key='generate_button'):
     values = [total_hours, b]
 
     plt.barh(labels, values)  # Switched to barh for horizontal bars
-    plt.xlabel('Count')  # Switched x-axis label
-    plt.ylabel('Hours')  # Switched y-axis label
+    plt.xlabel('Hours')  # Switched x-axis label
+    plt.ylabel('Count')  # Switched y-axis label
     plt.title('Total Hours vs Possible Hours')
 
     # Display the bar graph

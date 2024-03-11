@@ -5,9 +5,9 @@ from email.mime.multipart import MIMEMultipart
 
 def send_email(email_address):
     # Email configuration
-    sender_email = 'your_email@example.com'
-    sender_password = 'your_password'
-    smtp_server = 'smtp.example.com'
+    sender_email = 'sgalvankar.com'
+    sender_password = 'Siliconvalley@30'
+    smtp_server = 'smtp.gmail.com'
     smtp_port = 587
 
     # Create a multipart message
