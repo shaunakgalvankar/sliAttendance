@@ -27,7 +27,9 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+total_hours= 0
+b = 0
+a = 0
 st.title('SLI Attendance')
 # Load possible hours from JSON file
 with open('possibleHours.json') as f:
