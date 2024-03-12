@@ -81,8 +81,11 @@ if st.button('Generate', key='generate_button'):
     # Display the bar graph
     st.pyplot(plt)
     c = (total_hours / b) * 100
+    st.write('Hours Checked In: ')
     st.write(total_hours)
+    st.write('Possible Hours: ')
     st.write(b)
+    st.write('Percentage of possible hours attended: ')
     st.write(c)
 
 
