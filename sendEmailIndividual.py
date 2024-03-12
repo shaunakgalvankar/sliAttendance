@@ -3,7 +3,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-def send_email(email_address):
+def send_email(email_address,checkedInHours,possibleHours,dateRangefrom,daterangeTo):
     # Email configuration
     sender_email = 'shaunakprasad@gmail.com'
     sender_password = 'jfdh hxdc omna opiu'
@@ -14,10 +14,10 @@ def send_email(email_address):
     message = MIMEMultipart()
     message['From'] = sender_email
     message['To'] = email_address
-    message['Subject'] = 'Subject of the email'
+    message['Subject'] = 'SLI Attendance Report'
 
     # Add body to the email
-    body = 'This is the body of the email'
+    body = 'The student has checked in for ' + str(checkedInHours) + ' hours out of ' + str(possibleHours) + ' possible hours in the date range ' + dateRangefrom + '-'+daterangeTo+'.'
     message.attach(MIMEText(body, 'plain'))
 
     # Send the email
