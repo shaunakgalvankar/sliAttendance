@@ -17,7 +17,7 @@ def send_email(email_address,checkedInHours,possibleHours,dateRangefrom,daterang
     message['Subject'] = 'SLI Attendance Report'
 
     # Add body to the email
-    body = 'The student has checked in for ' + str(checkedInHours) + ' hours out of ' + str(possibleHours) + ' possible hours in the date range ' + str(dateRangefrom) + '-'+str(daterangeTo)+'.'
+    body = 'You were checked in for ' + str(checkedInHours) + ' hours out of ' + str(possibleHours) + ' possible hours in the date range ' + str(dateRangefrom) + '-'+str(daterangeTo)+'.'
     message.attach(MIMEText(body, 'plain'))
 
     # Send the email
