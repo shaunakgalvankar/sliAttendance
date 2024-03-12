@@ -127,8 +127,11 @@ st.dataframe(df, width=0)  # Set width to 0 to spread over the entire column
 
 email_input = st.text_input('Email', value='', max_chars=None, key=None)
 if st.button('Send Email', key='send_email_button'):
-    # Call the function with the entered email address
-    send_email(email_input, total_hours, b, startDate , endDate,str(student_id))
+    if email_input:
+        # Call the function with the entered email address
+        send_email(email_input, total_hours, b, startDate, endDate, str(student_id))
+    else:
+        st.error('Email address is required.')
 if st.button('Email All', key='email_all_button'):
     # Code to send email to all email addresses
     pass
