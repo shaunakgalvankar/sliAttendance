@@ -25,5 +25,3 @@ def send_email(email_address):
         server.starttls()
         server.login(sender_email, sender_password)
         server.send_message(message)
-
-send_email("rrajurkar@scu.edu")
