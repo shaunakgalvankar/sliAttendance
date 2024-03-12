@@ -5,8 +5,8 @@ from email.mime.multipart import MIMEMultipart
 
 def send_email(email_address):
     # Email configuration
-    sender_email = 'tsj.magic@gmail.com'
-    sender_password = 'Silicon@30'
+    sender_email = 'shaunakprasad@gmail.com'
+    sender_password = 'jfdh hxdc omna opiu'
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
 
@@ -26,4 +26,4 @@ def send_email(email_address):
         server.login(sender_email, sender_password)
         server.send_message(message)
 
-send_email("shaunakprasad@gmail.com")
+send_email("rrajurkar@scu.edu")
