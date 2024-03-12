@@ -42,6 +42,17 @@ today = datetime.date.today()
 endDate = st.date_input('End Date', value=min(today, lastDate), min_value=None, max_value=None, key=None)
 studentIDInput = st.text_input('Student ID', value=st.session_state.studentID, max_chars=None, key=None)
 
+start_date = startDate.strftime("%m/%d/%Y")
+end_date = endDate.strftime("%m/%d/%Y")
+student_id = studentIDInput
+a = studentHoursBetween(student_id, start_date, end_date)
+hours, minutes, seconds = map(int, a.split(':'))
+total_seconds = hours * 3600 + minutes * 60 + seconds
+total_hours = total_seconds / 3600
+total_hours = round(total_hours, 2)
+
+b = PossibleHoursBetween(start_date, end_date)
+
 # Generate button
 if st.button('Generate', key='generate_button'):
     # Fetch the data from startDate, endDate, and studentIDInput
